@@ -1,0 +1,129 @@
+
+@keyframes square-to-circle {
+	0%{
+		border-radius: 0 0 0 0;
+		background:coral;
+		transform:rotate(0deg);
+	}
+	25%{
+		border-radius: 50% 0 0 0;
+		background:darksalmon;
+		transform:rotate(45deg);
+	}
+	50%{
+		border-radius: 50% 50% 0 0;
+		background:indianred;
+		transform:rotate(90deg);
+	}
+	75% {
+		border-radius: 50% 50% 50% 0;
+		background:lightcoral;
+		transform:rotate(135deg);
+	}
+	100%{
+		border-radius: 50% 50% 50% 50%;
+		background: gold;
+		transform:rotate(180deg);
+	}
+}
+
+@keyframes sun-pattern {
+	0% {
+		background-color: gold;
+	}
+	50% {
+		transform: translate(0,600px);
+		background-color: #FE5B35;
+	}
+	100% {
+		background-color: #FEFCD7;
+	}
+}
+
+@keyframes sky-color {
+	0% {
+		background-color: lightskyblue;
+	}
+	50% {
+		background-color: #E39A1E;
+	}
+	100% {
+		background-color: #001848;
+	}
+}
+
+@keyframes cloud {
+	0% {
+		transform: translate(-1500px,0);
+	}
+	100%{
+		transform: translate(1500px,0);
+
+	}
+}
+body {
+	margin: 0 0 0 0;
+	background-color: lightskyblue;
+	animation: sky-color 20s 3s infinite alternate;
+}
+
+.tree {
+	float: left;
+	margin-left: 20px;
+}
+.sun {
+	margin-left: 40px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	outline: 1px solid transparent;
+	width: 200px;
+	height: 200px;
+	border-radius: 50% 50% 50% 50%;
+	background-color: gold; 
+	/*animation: square-to-circle 2s forwards; */
+	animation: sun-pattern 20s 3s infinite alternate;
+}
+
+.top {
+	outline: 1px solid transparent;
+	height: 0px;
+	width: 0px;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 200px solid #00680A;
+}
+.trunk {
+	height: 150px;
+	width: 50px;
+	background-color: brown;
+	margin-left: 75px;
+}
+.grass {
+	clear: both;
+	background-color: green;
+	width: 100%;
+	height: 135px;
+}
+
+.cloud-1 {
+	animation: cloud 100s infinite alternate;
+}
+.cloud-2 {
+	animation: cloud 200s  infinite alternate;
+}
+.cloud-3 {
+	animation: cloud 150s  infinite alternate;
+}
+
+svg {
+	position: relative;
+	float: right;
+  height: 30%;
+  width: 30%;
+}
+path {
+  fill: white;
+  stroke: black;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
